@@ -261,6 +261,11 @@ header nav .nav-tools a span {
     align-self: unset;
   }
 
+  header nav .nav-sections .default-content-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+
   header nav .nav-sections .default-content-wrapper > ul {
     display: flex;
     gap: 32px;
