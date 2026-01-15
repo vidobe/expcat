@@ -11,45 +11,50 @@
  */
 
 :root {
-  /* colors */
-  --background-color: white;
-  --light-color: #f8f8f8;
-  --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+  /* colors - Epson brand */
+  --background-color: #fff;
+  --light-color: #f5f5f5;
+  --dark-color: #333;
+  --text-color: #000;
+  --link-color: #003399;
+  --link-hover-color: #002266;
+  --primary-blue: #003399;
+  --accent-color: #003399;
+  --border-color: #dadada;
+  --muted-text: #666;
 
-  /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  /* fonts - Epson uses Helvetica */
+  --body-font-family: 'Helvetica Neue', helvetica, arial, sans-serif;
+  --heading-font-family: 'Helvetica Neue', helvetica, arial, sans-serif;
 
   /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 19px;
-  --body-font-size-xs: 17px;
+  --body-font-size-m: 16px;
+  --body-font-size-s: 14px;
+  --body-font-size-xs: 12px;
 
   /* heading sizes */
-  --heading-font-size-xxl: 55px;
-  --heading-font-size-xl: 44px;
-  --heading-font-size-l: 34px;
-  --heading-font-size-m: 27px;
-  --heading-font-size-s: 24px;
-  --heading-font-size-xs: 22px;
+  --heading-font-size-xxl: 42px;
+  --heading-font-size-xl: 35px;
+  --heading-font-size-l: 28px;
+  --heading-font-size-m: 22px;
+  --heading-font-size-s: 18px;
+  --heading-font-size-xs: 16px;
 
   /* nav height */
-  --nav-height: 64px;
+  --nav-height: 80px;
+
+  /* spacing */
+  --spacing-xs: 8px;
+  --spacing-s: 16px;
+  --spacing-m: 24px;
+  --spacing-l: 40px;
+  --spacing-xl: 60px;
 }
 
 /* fallback fonts */
 @font-face {
-  font-family: roboto-condensed-fallback;
-  size-adjust: 88.82%;
-  src: local('Arial');
-}
-
-@font-face {
-  font-family: roboto-fallback;
-  size-adjust: 99.529%;
+  font-family: helvetica-fallback;
+  size-adjust: 100%;
   src: local('Arial');
 }
 
@@ -107,9 +112,10 @@ h6 {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
   font-family: var(--heading-font-family);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.25;
   scroll-margin: 40px;
+  color: var(--text-color);
 }
 
 h1 { font-size: var(--heading-font-size-xxl); }
@@ -165,28 +171,32 @@ a:hover {
   text-decoration: underline;
 }
 
-/* buttons */
+/* buttons - Epson style */
 a.button:any-link,
 button {
   box-sizing: border-box;
   display: inline-block;
   max-width: 100%;
   margin: 12px 0;
-  border: 2px solid transparent;
-  border-radius: 2.4em;
-  padding: 0.5em 1.2em;
+  border: 2px solid var(--primary-blue);
+  border-radius: 4px;
+  padding: 10px 24px;
   font-family: var(--body-font-family);
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 14px;
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  background-color: var(--link-color);
-  color: var(--background-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background-color: var(--primary-blue);
+  color: #fff;
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  transition: background-color 0.2s, border-color 0.2s;
 }
 
 a.button:hover,
@@ -229,22 +239,41 @@ main img {
 
 /* sections */
 main > .section {
-  margin: 40px 0;
+  margin: var(--spacing-xl) 0;
 }
 
 main > .section > div {
   max-width: 1200px;
   margin: auto;
-  padding: 0 24px;
+  padding: 0 var(--spacing-m);
 }
 
 main > .section:first-of-type {
   margin-top: 0;
 }
 
+/* Block spacing within sections */
+main > .section > div > .block {
+  margin-bottom: var(--spacing-l);
+}
+
+main > .section > div > .block:last-child {
+  margin-bottom: 0;
+}
+
+/* Cards blocks need more vertical space between them */
+main > .section > div > .cards-article,
+main > .section > div > .cards-promo {
+  margin-bottom: var(--spacing-xl);
+}
+
 @media (width >= 900px) {
   main > .section > div {
-    padding: 0 32px;
+    padding: 0 var(--spacing-l);
+  }
+
+  main > .section {
+    margin: 80px 0;
   }
 }
 
@@ -253,5 +282,5 @@ main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
-  padding: 40px 0;
+  padding: var(--spacing-xl) 0;
 }
