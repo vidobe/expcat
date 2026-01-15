@@ -1,0 +1,38 @@
+{
+  "variantName": "cards-promo",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-01-15T08:15:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://blog.epson.com/",
+    "originPage": "Epson blog homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "promotional-cta",
+    "imagePattern": "optional"
+  },
+  "contentPattern": {
+    "structure": "category + heading + description + cta-link",
+    "buttonCount": 1,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "promotional call-to-action cards",
+      "whitepaper/webinar downloads",
+      "featured content with dark background"
+    ],
+    "notSuitableFor": [
+      "standard article listings",
+      "light-themed content areas"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-01-15T08:15:00.000Z"
+  }
+}

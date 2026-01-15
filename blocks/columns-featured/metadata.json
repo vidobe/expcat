@@ -1,0 +1,38 @@
+{
+  "variantName": "columns-featured",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-01-15T08:15:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://blog.epson.com/",
+    "originPage": "Epson blog homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "featured-article",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + heading + paragraph + link",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "featured article sections",
+      "blog hero areas",
+      "highlight content with large image"
+    ],
+    "notSuitableFor": [
+      "icon-based features",
+      "multi-column comparison layouts"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-01-15T08:15:00.000Z"
+  }
+}

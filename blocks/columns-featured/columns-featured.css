@@ -1,0 +1,78 @@
+/* Columns Featured - Epson full-width card style */
+.columns-featured {
+  background-color: var(--light-color);
+  padding: var(--spacing-l) 0;
+  margin: 0 calc(-1 * var(--spacing-m));
+}
+
+.columns-featured > div {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-m);
+}
+
+.columns-featured img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.columns-featured > div > div {
+  order: 1;
+  padding: var(--spacing-m) 0;
+}
+
+.columns-featured > div > .columns-featured-img-col {
+  order: 0;
+}
+
+.columns-featured > div > .columns-featured-img-col img {
+  display: block;
+}
+
+.columns-featured h3 {
+  font-size: var(--heading-font-size-xl);
+  margin: 0 0 var(--spacing-s);
+  color: var(--text-color);
+}
+
+.columns-featured p {
+  font-size: var(--body-font-size-m);
+  color: var(--muted-text);
+  line-height: 1.6;
+  margin: 0 0 var(--spacing-s);
+}
+
+.columns-featured a {
+  color: var(--link-color);
+  font-size: var(--body-font-size-s);
+  text-decoration: none;
+}
+
+.columns-featured a:hover {
+  text-decoration: underline;
+}
+
+@media (width >= 900px) {
+  .columns-featured {
+    margin: 0;
+    padding: var(--spacing-xl) var(--spacing-m);
+  }
+
+  .columns-featured > div {
+    align-items: center;
+    flex-direction: row;
+    gap: var(--spacing-l);
+  }
+
+  .columns-featured > div > div {
+    flex: 1;
+    order: unset;
+    padding: 0;
+  }
+
+  .columns-featured > div > .columns-featured-img-col {
+    flex: 1.2;
+  }
+}

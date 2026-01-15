@@ -1,0 +1,119 @@
+/* Cards Article - Epson article card grid */
+.cards-article > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-m);
+}
+
+.cards-article > ul > li {
+  background-color: var(--background-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.cards-article > ul > li:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+}
+
+.cards-article .cards-article-card-image {
+  position: relative;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.cards-article > ul > li img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.cards-article > ul > li:hover img {
+  transform: scale(1.05);
+}
+
+.cards-article .cards-article-card-body {
+  padding: var(--spacing-s) var(--spacing-m);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cards-article .cards-article-card-body h3 {
+  font-size: var(--heading-font-size-s);
+  font-weight: 700;
+  margin: 0 0 var(--spacing-s);
+  line-height: 1.35;
+  color: var(--text-color);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cards-article .cards-article-card-body h3:hover {
+  color: var(--link-color);
+}
+
+.cards-article .cards-article-card-body p {
+  font-size: var(--body-font-size-s);
+  color: var(--muted-text);
+  margin: 0;
+  margin-top: auto;
+}
+
+/* Read time badge styling */
+.cards-article .cards-article-card-body a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-size: var(--body-font-size-xs);
+  font-weight: 600;
+  padding: 6px 12px;
+  background: rgba(0, 51, 153, 0.08);
+  border-radius: 20px;
+  transition: background 0.2s ease, color 0.2s ease;
+  width: fit-content;
+}
+
+.cards-article .cards-article-card-body a::before {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: currentColor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M12 6v6l4 2'/%3E%3C/svg%3E") center/contain no-repeat;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M12 6v6l4 2'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+
+.cards-article .cards-article-card-body a:hover {
+  background: var(--primary-blue);
+  color: #fff;
+}
+
+/* Responsive adjustments */
+@media (width >= 600px) {
+  .cards-article > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 900px) {
+  .cards-article > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cards-article .cards-article-card-body {
+    padding: var(--spacing-m);
+  }
+}

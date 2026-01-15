@@ -1,0 +1,38 @@
+{
+  "variantName": "cards-article",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-01-15T08:15:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://blog.epson.com/",
+    "originPage": "Epson blog homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "article-cards",
+    "imagePattern": "top-image"
+  },
+  "contentPattern": {
+    "structure": "image + heading + link",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "blog article listings",
+      "news feed cards",
+      "content teasers with images"
+    ],
+    "notSuitableFor": [
+      "product cards with pricing",
+      "feature icons without images"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-01-15T08:15:00.000Z"
+  }
+}

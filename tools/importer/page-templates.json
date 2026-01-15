@@ -1,0 +1,26 @@
+{
+  "templates": [
+    {
+      "name": "epson-blog-homepage",
+      "urls": ["https://blog.epson.com/"],
+      "description": "Epson blog homepage with featured articles, article grid, and promotional CTA cards",
+      "blocks": [
+        {
+          "name": "columns-featured",
+          "instances": [".featured .card--fullwidth"]
+        },
+        {
+          "name": "cards-article",
+          "instances": [
+            ".featured .card:not(.card--fullwidth)",
+            ".latest .card"
+          ]
+        },
+        {
+          "name": "cards-promo",
+          "instances": [".call-to-action.call-to-action--video"]
+        }
+      ]
+    }
+  ]
+}

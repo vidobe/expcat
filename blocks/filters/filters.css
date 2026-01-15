@@ -1,0 +1,129 @@
+/* Filters Block - Blog post filtering */
+.filters {
+  background-color: var(--light-color);
+  padding: var(--spacing-l) 0;
+  margin: var(--spacing-l) 0;
+}
+
+.filters > div {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-m);
+}
+
+.filters h2 {
+  font-size: var(--heading-font-size-l);
+  font-weight: 700;
+  margin: 0 0 var(--spacing-m);
+  color: var(--text-color);
+}
+
+.filters .filters-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s);
+}
+
+/* Filter dropdown groups */
+.filters .filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filters .filter-group label {
+  font-size: var(--body-font-size-s);
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.filters .filter-group select {
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 12px 40px 12px 16px;
+  font-size: var(--body-font-size-m);
+  font-family: var(--body-font-family);
+  color: var(--text-color);
+  cursor: pointer;
+  width: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 20px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.filters .filter-group select:hover {
+  border-color: var(--primary-blue);
+}
+
+.filters .filter-group select:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(0, 51, 153, 0.1);
+}
+
+/* Apply button */
+.filters .filters-actions {
+  margin-top: var(--spacing-s);
+}
+
+.filters .filters-actions button {
+  background-color: var(--primary-blue);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 32px;
+  font-size: var(--body-font-size-s);
+  font-weight: 600;
+  font-family: var(--body-font-family);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+  width: 100%;
+}
+
+.filters .filters-actions button:hover {
+  background-color: var(--link-hover-color);
+}
+
+.filters .filters-actions button:active {
+  transform: scale(0.98);
+}
+
+/* Desktop layout */
+@media (width >= 768px) {
+  .filters .filters-container {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: var(--spacing-m);
+  }
+
+  .filters .filter-group {
+    flex: 1;
+  }
+
+  .filters .filters-actions {
+    margin-top: 0;
+    flex-shrink: 0;
+  }
+
+  .filters .filters-actions button {
+    width: auto;
+    padding: 12px 40px;
+  }
+}
+
+@media (width >= 1024px) {
+  .filters {
+    margin: var(--spacing-xl) 0;
+    padding: var(--spacing-xl) 0;
+  }
+
+  .filters .filters-container {
+    gap: var(--spacing-l);
+  }
+}
