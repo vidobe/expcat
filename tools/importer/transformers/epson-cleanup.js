@@ -12,10 +12,10 @@
 
 const TransformHook = {
   beforeTransform: 'beforeTransform',
-  afterTransform: 'afterTransform'
+  afterTransform: 'afterTransform',
 };
 
-export default function transform(hookName, element, payload) {
+export default function transform(hookName, element) {
   if (hookName === TransformHook.beforeTransform) {
     // Remove header/navigation (auto-populated in EDS)
     // EXTRACTED: Found .site-header in captured DOM
@@ -35,10 +35,8 @@ export default function transform(hookName, element, payload) {
 
     // Remove empty source elements from picture tags
     // EXTRACTED: Found empty <source> elements in captured DOM
-    const emptySources = element.querySelectorAll('source:not([src])');
-    for (const source of emptySources) {
-      source.remove();
-    }
+    const emptySources = [...element.querySelectorAll('source:not([src])')];
+    emptySources.forEach((source) => source.remove());
   }
 
   if (hookName === TransformHook.afterTransform) {
@@ -47,7 +45,7 @@ export default function transform(hookName, element, payload) {
     WebImporter.DOMUtils.remove(element, [
       'video',
       'source',
-      'noscript'
+      'noscript',
     ]);
   }
 }

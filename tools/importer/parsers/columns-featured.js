@@ -68,7 +68,7 @@ export default function parse(element, { document }) {
   }
 
   const cells = [
-    [image || '', contentCell]
+    [image || '', contentCell],
   ];
 
   // Create block using WebImporter utility

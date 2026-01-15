@@ -12,14 +12,14 @@
   background-color: var(--background-color);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   display: flex;
   flex-direction: column;
 }
 
 .cards-article > ul > li:hover {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 12%);
   transform: translateY(-4px);
 }
 
@@ -80,7 +80,7 @@
   font-size: var(--body-font-size-xs);
   font-weight: 600;
   padding: 6px 12px;
-  background: rgba(0, 51, 153, 0.08);
+  background: rgb(0 51 153 / 8%);
   border-radius: 20px;
   transition: background 0.2s ease, color 0.2s ease;
   width: fit-content;
@@ -91,9 +91,8 @@
   display: inline-block;
   width: 14px;
   height: 14px;
-  background: currentColor;
+  background: currentcolor;
   mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M12 6v6l4 2'/%3E%3C/svg%3E") center/contain no-repeat;
-  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M12 6v6l4 2'/%3E%3C/svg%3E") center/contain no-repeat;
 }
 
 .cards-article .cards-article-card-body a:hover {

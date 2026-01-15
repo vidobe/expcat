@@ -55,7 +55,7 @@ export default function parse(element, { document }) {
 
   // Build cells array - single card per row
   const cells = [
-    [image || '', contentCell]
+    [image || '', contentCell],
   ];
 
   // Create block using WebImporter utility

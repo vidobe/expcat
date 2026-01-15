@@ -21,7 +21,7 @@ export default function decorate(block) {
     if (cells.length >= 2) {
       const label = cells[0].textContent.trim();
       const optionsText = cells[1].textContent.trim();
-      const options = optionsText.split(',').map(opt => opt.trim());
+      const options = optionsText.split(',').map((opt) => opt.trim());
 
       // Create filter group
       const group = document.createElement('div');
@@ -79,11 +79,12 @@ export default function decorate(block) {
     // Dispatch custom event for filtering
     const event = new CustomEvent('filterApply', {
       detail: filters,
-      bubbles: true
+      bubbles: true,
     });
     block.dispatchEvent(event);
 
     // For now, just log the filters (can be extended for actual filtering)
+    // eslint-disable-next-line no-console
     console.log('Filters applied:', filters);
   });
 

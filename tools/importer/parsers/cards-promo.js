@@ -58,7 +58,7 @@ export default function parse(element, { document }) {
 
   // Build cells array - single content cell (no image for this variant)
   const cells = [
-    [contentCell]
+    [contentCell],
   ];
 
   // Create block using WebImporter utility

@@ -24,19 +24,26 @@
   right: 0;
   width: 150px;
   height: 150px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgb(255 255 255 / 10%) 0%, transparent 70%);
   pointer-events: none;
 }
 
 .cards-promo > ul > li:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0, 51, 153, 0.35);
+  box-shadow: 0 12px 32px rgb(0 51 153 / 35%);
 }
 
 .cards-promo .cards-promo-card-body {
   padding: var(--spacing-l) var(--spacing-m);
   position: relative;
   z-index: 1;
+}
+
+.cards-promo .cards-promo-card-body p {
+  font-size: var(--body-font-size-m);
+  color: rgb(255 255 255 / 85%);
+  margin: 0 0 var(--spacing-m);
+  line-height: 1.6;
 }
 
 /* Category label */
@@ -47,9 +54,9 @@
   letter-spacing: 1.5px;
   margin: 0 0 var(--spacing-s);
   padding: 4px 10px;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgb(255 255 255 / 15%);
   border-radius: 4px;
-  color: rgba(255, 255, 255, 0.95);
+  color: rgb(255 255 255 / 95%);
   font-weight: 600;
 }
 
@@ -59,13 +66,6 @@
   margin: 0 0 var(--spacing-s);
   color: #fff;
   line-height: 1.2;
-}
-
-.cards-promo .cards-promo-card-body p {
-  font-size: var(--body-font-size-m);
-  color: rgba(255, 255, 255, 0.85);
-  margin: 0 0 var(--spacing-m);
-  line-height: 1.6;
 }
 
 /* CTA Button */
@@ -79,7 +79,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  border: 2px solid rgba(255, 255, 255, 0.9);
+  border: 2px solid rgb(255 255 255 / 90%);
   padding: 12px 24px;
   border-radius: 6px;
   transition: all 0.25s ease;
@@ -91,9 +91,8 @@
   display: inline-block;
   width: 16px;
   height: 16px;
-  background: currentColor;
+  background: currentcolor;
   mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Cpath d='M5 12h14M12 5l7 7-7 7'/%3E%3C/svg%3E") center/contain no-repeat;
-  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Cpath d='M5 12h14M12 5l7 7-7 7'/%3E%3C/svg%3E") center/contain no-repeat;
   transition: transform 0.2s ease;
 }
 

@@ -62,7 +62,7 @@
 .filters .filter-group select:focus {
   outline: none;
   border-color: var(--primary-blue);
-  box-shadow: 0 0 0 3px rgba(0, 51, 153, 0.1);
+  box-shadow: 0 0 0 3px rgb(0 51 153 / 10%);
 }
 
 /* Apply button */
