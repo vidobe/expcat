@@ -38,7 +38,8 @@ header nav[aria-expanded='true'] {
 
   header nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
     gap: 0 32px;
     max-width: 1264px;
     padding: 0 32px;
@@ -58,7 +59,7 @@ header nav p {
 /* brand */
 header .nav-brand {
   grid-area: brand;
-  flex-basis: 128px;
+  flex: 0 0 auto;
   font-size: var(--heading-font-size-s);
   font-weight: 700;
   line-height: 1;
@@ -80,7 +81,7 @@ header nav a:any-link {
 }
 
 header nav a:hover {
-  color: var(--primary-blue, #039);
+  color: var(--epson-blue, #003087);
 }
 
 /* hamburger */
@@ -195,6 +196,7 @@ header nav .nav-tools {
   display: flex;
   align-items: center;
   gap: 16px;
+  margin-left: auto;
 }
 
 header nav .nav-tools ul {
@@ -211,22 +213,28 @@ header nav .nav-sections ul > li > ul > li {
   font-weight: 400;
 }
 
-header nav .nav-tools a {
+/* Search button styling */
+header nav .nav-tools .search-button {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 40px;
   height: 40px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
   color: #333;
+  cursor: pointer;
   transition: color 0.2s ease;
 }
 
-header nav .nav-tools a:hover {
-  color: var(--primary-blue, #039);
+header nav .nav-tools .search-button:hover {
+  color: var(--epson-blue, #003087);
+  background: transparent;
 }
 
-/* Search icon styling */
-header nav .nav-tools a::before {
+header nav .nav-tools .search-button::before {
   content: '';
   display: block;
   width: 20px;
@@ -236,7 +244,7 @@ header nav .nav-tools a::before {
   mask-size: contain;
 }
 
-header nav .nav-tools a span {
+header nav .nav-tools .search-button span {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -248,12 +256,107 @@ header nav .nav-tools a span {
   border: 0;
 }
 
+/* Search modal */
+.search-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0 0 0 / 50%);
+  z-index: 1000;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.search-modal.open {
+  display: flex;
+}
+
+.search-modal-content {
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 10px 40px rgb(0 0 0 / 20%);
+}
+
+.search-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.search-modal-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+.search-modal-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  padding: 0;
+  margin: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-modal-close:hover {
+  color: #333;
+  background: none;
+}
+
+.search-modal-form {
+  display: flex;
+  gap: 12px;
+}
+
+.search-modal-form input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.search-modal-form input:focus {
+  outline: none;
+  border-color: var(--epson-blue, #003087);
+}
+
+.search-modal-form button {
+  padding: 12px 24px;
+  background: var(--epson-blue, #003087);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.search-modal-form button:hover {
+  background: #001a4d;
+}
+
 @media (width >= 900px) {
   header nav .nav-sections {
     display: flex;
     visibility: visible;
     white-space: nowrap;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
   }
 
@@ -286,7 +389,7 @@ header nav .nav-tools a span {
   }
 
   header nav .nav-sections .nav-drop:hover {
-    color: var(--primary-blue, #039);
+    color: var(--epson-blue, #003087);
   }
 
   header nav .nav-sections .nav-drop::after {
@@ -357,6 +460,6 @@ header nav .nav-tools a span {
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li a:hover {
-    color: var(--primary-blue, #039);
+    color: var(--epson-blue, #003087);
   }
 }

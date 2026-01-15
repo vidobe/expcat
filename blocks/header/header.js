@@ -104,6 +104,57 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
 }
 
 /**
+ * Creates and manages the search modal
+ */
+function createSearchModal() {
+  const modal = document.createElement('div');
+  modal.className = 'search-modal';
+  modal.innerHTML = `
+    <div class="search-modal-content">
+      <div class="search-modal-header">
+        <h3>Search</h3>
+        <button class="search-modal-close" aria-label="Close search">&times;</button>
+      </div>
+      <form class="search-modal-form">
+        <input type="search" placeholder="Search the blog..." aria-label="Search">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  `;
+
+  // Close modal on background click
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('open');
+    }
+  });
+
+  // Close modal on close button click
+  modal.querySelector('.search-modal-close').addEventListener('click', () => {
+    modal.classList.remove('open');
+  });
+
+  // Close modal on escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.code === 'Escape' && modal.classList.contains('open')) {
+      modal.classList.remove('open');
+    }
+  });
+
+  // Handle form submit
+  modal.querySelector('.search-modal-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const query = modal.querySelector('input').value;
+    if (query) {
+      window.location.href = `https://blog.epson.com/?s=${encodeURIComponent(query)}`;
+    }
+  });
+
+  document.body.appendChild(modal);
+  return modal;
+}
+
+/**
  * loads and decorates the header, mainly the nav
  * @param {Element} block The header block element
  */
@@ -144,6 +195,31 @@ export default async function decorate(block) {
         }
       });
     });
+  }
+
+  // Setup search functionality
+  const navTools = nav.querySelector('.nav-tools');
+  if (navTools) {
+    const searchLink = navTools.querySelector('a[href*="#"]');
+    if (searchLink && searchLink.textContent.toLowerCase().includes('search')) {
+      // Create search button
+      const searchButton = document.createElement('button');
+      searchButton.className = 'search-button';
+      searchButton.setAttribute('aria-label', 'Open search');
+      searchButton.innerHTML = '<span>Search</span>';
+
+      // Create search modal
+      const searchModal = createSearchModal();
+
+      // Open modal on button click
+      searchButton.addEventListener('click', () => {
+        searchModal.classList.add('open');
+        searchModal.querySelector('input').focus();
+      });
+
+      // Replace link with button
+      searchLink.parentElement.replaceChild(searchButton, searchLink);
+    }
   }
 
   // hamburger for mobile
