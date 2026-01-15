@@ -1,1 +1,3 @@
-export { default } from '../columns/columns.js';
+import decorate from '../columns/columns.js';
+
+export default decorate;

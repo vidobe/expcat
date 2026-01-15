@@ -1,1 +1,3 @@
-export { default } from '../cards/cards.js';
+import decorate from '../cards/cards.js';
+
+export default decorate;
