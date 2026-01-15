@@ -32,3 +32,9 @@ Copyright 2000-2026 Epson America, Inc
   - [Epson Experts](https://blog.epson.com/tag/epson-experts/)
   - [Sustainability](https://blog.epson.com/tag/sustainability/)
   - [Future of Work](https://blog.epson.com/future-of-work/)
+
+---
+
+| Language Switcher |
+| ----------------- |
+|                   |
