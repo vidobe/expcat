@@ -9,9 +9,10 @@ export default function decorate(block) {
   ];
 
   // Detect current language from URL path
-  // French content is at /content/fr/ not /fr/content/
+  // Handles both deployed site (/fr/) and local dev (/content/fr/)
   const currentPath = window.location.pathname;
-  const isFrench = currentPath.includes('/content/fr/') || currentPath.includes('/fr/');
+  const isFrench = currentPath.startsWith('/fr/') || currentPath === '/fr'
+    || currentPath.includes('/content/fr/');
   const currentLang = isFrench ? 'fr' : 'en';
 
   // Create the switcher UI
@@ -44,14 +45,20 @@ export default function decorate(block) {
     const link = document.createElement('a');
 
     // Calculate the target URL
-    // French content is at /content/fr/page.html, English at /content/page.html
+    // Handles both deployed site (/fr/) and local dev (/content/fr/)
     let targetPath;
-    if (lang.code === 'en') {
-      // Switching to English - remove /fr from /content/fr/
-      targetPath = currentPath.replace('/content/fr/', '/content/') || '/';
-    } else {
-      // Switching to French - change /content/ to /content/fr/
+    if (lang.code === 'en' && currentPath.includes('/content/fr/')) {
+      // Local dev: switching to English - remove /fr from /content/fr/
+      targetPath = currentPath.replace('/content/fr/', '/content/');
+    } else if (lang.code === 'en') {
+      // Deployed site: switching to English - remove /fr prefix
+      targetPath = currentPath.replace(/^\/fr\/?/, '/') || '/';
+    } else if (currentPath.includes('/content/')) {
+      // Local dev: switching to French - add /fr after /content/
       targetPath = currentPath.replace('/content/', '/content/fr/');
+    } else {
+      // Deployed site: switching to French - add /fr prefix
+      targetPath = currentPath === '/' ? '/fr/' : `/fr${currentPath}`;
     }
 
     link.href = targetPath;
