@@ -4,43 +4,33 @@ import { loadFragment } from '../fragment/fragment.js';
 // media query match that indicates mobile/tablet width
 const isDesktop = window.matchMedia('(min-width: 900px)');
 
-function createSearchModal() {
-  const modal = document.createElement('div');
-  modal.className = 'search-modal';
-  modal.innerHTML = `
-    <div class="search-modal-content">
-      <div class="search-modal-header">
-        <h3>Search</h3>
-        <button class="search-modal-close" aria-label="Close search">&times;</button>
-      </div>
-      <form class="search-modal-form" action="https://blog.epson.com/" method="get">
-        <input type="text" name="s" placeholder="Search..." aria-label="Search query">
-        <button type="submit">Search</button>
-      </form>
-    </div>
+function createSearchDropdown() {
+  const dropdown = document.createElement('div');
+  dropdown.className = 'search-dropdown';
+  dropdown.innerHTML = `
+    <form class="search-dropdown-form" action="https://blog.epson.com/" method="get">
+      <input type="text" name="s" placeholder="Search..." aria-label="Search query">
+      <button type="submit" aria-label="Submit search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+    </form>
   `;
-
-  // Close on backdrop click
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.classList.remove('open');
-    }
-  });
-
-  // Close on button click
-  modal.querySelector('.search-modal-close').addEventListener('click', () => {
-    modal.classList.remove('open');
-  });
 
   // Close on escape key
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('open')) {
-      modal.classList.remove('open');
+    if (e.key === 'Escape' && dropdown.classList.contains('open')) {
+      dropdown.classList.remove('open');
     }
   });
 
-  document.body.appendChild(modal);
-  return modal;
+  // Close when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!dropdown.contains(e.target) && !e.target.closest('.search-button')) {
+      dropdown.classList.remove('open');
+    }
+  });
+
+  return dropdown;
 }
 
 function closeOnEscape(e) {
@@ -205,24 +195,37 @@ export default async function decorate(block) {
     const allLinks = navTools.querySelectorAll('a');
     const searchLink = Array.from(allLinks).find((a) => a.textContent.toLowerCase().includes('search'));
     if (searchLink) {
+      // Create search container to hold button and dropdown
+      const searchContainer = document.createElement('div');
+      searchContainer.className = 'search-container';
+
       const searchButton = document.createElement('button');
       searchButton.className = 'search-button';
       searchButton.setAttribute('aria-label', 'Open search');
+      searchButton.setAttribute('aria-expanded', 'false');
       searchButton.innerHTML = '<span>Search</span>';
 
-      const searchModal = createSearchModal();
+      const searchDropdown = createSearchDropdown();
 
-      searchButton.addEventListener('click', () => {
-        searchModal.classList.add('open');
-        searchModal.querySelector('input').focus();
+      searchButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = searchDropdown.classList.contains('open');
+        searchDropdown.classList.toggle('open');
+        searchButton.setAttribute('aria-expanded', !isOpen);
+        if (!isOpen) {
+          searchDropdown.querySelector('input').focus();
+        }
       });
 
-      // Replace the link with the button
+      searchContainer.appendChild(searchButton);
+      searchContainer.appendChild(searchDropdown);
+
+      // Replace the link with the search container
       const linkParent = searchLink.parentElement;
       if (linkParent.tagName === 'P') {
-        linkParent.replaceChild(searchButton, searchLink);
+        linkParent.replaceWith(searchContainer);
       } else {
-        searchLink.parentElement.replaceChild(searchButton, searchLink);
+        searchLink.parentElement.replaceWith(searchContainer);
       }
     }
   }

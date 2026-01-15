@@ -1,0 +1,231 @@
+{
+  "url": "https://blog.epson.com/",
+  "analysisDate": "2026-01-15",
+  "excludedElements": {
+    "header": "Auto-populated - Epson logo, Industries/Solutions/Insights nav, search",
+    "footer": "Auto-populated - Legal text, copyright, footer navigation",
+    "cookieBanner": "OneTrust cookie consent - not migrated"
+  },
+  "sections": [
+    {
+      "sectionNumber": 1,
+      "name": "Featured Articles",
+      "visualStyle": {
+        "background": "light/white",
+        "notes": "Clean white background, prominent feature area"
+      },
+      "contentSequences": [
+        {
+          "sequenceNumber": 1,
+          "neutralDescription": "One large featured article with image on left half, title, description paragraph, and read time link on right half - 50/50 split layout",
+          "htmlClass": "card card--fullwidth",
+          "content": {
+            "image": "https://images-cdn4.welcomesoftware.com/...",
+            "title": "How Document Scanners can Help Protect Citizen Data at the Source",
+            "description": "Some government offices across the country still house many sensitive paper-based documents...",
+            "readTime": "3 min read",
+            "link": "https://blog.epson.com/how-document-scanners-can-help-protect-citizen-data/"
+          }
+        },
+        {
+          "sequenceNumber": 2,
+          "neutralDescription": "Three smaller article cards in horizontal row, each with image on top, title below, and read time link",
+          "htmlClass": "card",
+          "itemCount": 3,
+          "items": [
+            {
+              "title": "A Three-Phased Approach that can Help Schools Take Robotics Education from Virtual to Reality",
+              "readTime": "2 min read"
+            },
+            {
+              "title": "15 Great Ideas to Get the Most from Your School Printer – and Inspire Students",
+              "readTime": "3 min read"
+            },
+            {
+              "title": "6 Government Agencies That Can Benefit From Document Scanners Today",
+              "readTime": "2 min read"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sectionNumber": 2,
+      "name": "Content Filters",
+      "visualStyle": {
+        "background": "light with grey filter bar area",
+        "notes": "Filter controls for blog content"
+      },
+      "contentSequences": [
+        {
+          "sequenceNumber": 1,
+          "neutralDescription": "Filter heading with three dropdown selectors (Category, Tag, Format) and Apply Filter button",
+          "htmlClass": "filter",
+          "interactiveElement": true,
+          "note": "Dynamic filtering functionality - may not be fully migratable as static content"
+        },
+        {
+          "sequenceNumber": 2,
+          "neutralDescription": "Row of category/tag filter buttons: All Categories, Education, Architecture & Engineering, Article, Enterprise, Business Hi-Jet, Case Study",
+          "htmlClass": "filter-tags (visual from screenshot)",
+          "itemCount": 7
+        }
+      ]
+    },
+    {
+      "sectionNumber": 3,
+      "name": "Latest Articles Grid",
+      "visualStyle": {
+        "background": "light/white",
+        "notes": "Main content grid area"
+      },
+      "contentSequences": [
+        {
+          "sequenceNumber": 1,
+          "neutralDescription": "Two larger article cards side by side (2-column layout), each with image, title, and read time",
+          "htmlClass": "card",
+          "layout": "2-column",
+          "itemCount": 2,
+          "items": [
+            {
+              "title": "Epson and Cirque du Soleil: Bringing Imagination to Life with Cutting-Edge Projection Technology",
+              "readTime": "2 min read"
+            },
+            {
+              "title": "Why Your Next Scanner Better Speak Arm",
+              "readTime": "2 min read"
+            }
+          ]
+        },
+        {
+          "sequenceNumber": 2,
+          "neutralDescription": "Three article cards in horizontal row (3-column layout), each with image, title, and read time",
+          "htmlClass": "card",
+          "layout": "3-column",
+          "itemCount": 3,
+          "items": [
+            {
+              "title": "How to Create a New Generation of Robot Whisperers",
+              "readTime": "3 min read"
+            },
+            {
+              "title": "Energy Managers: Is Your Next Efficiency Win Hiding in the Copy Room?",
+              "readTime": "4 min read"
+            },
+            {
+              "title": "Making Money as a Photographer",
+              "readTime": "9 min read"
+            }
+          ]
+        },
+        {
+          "sequenceNumber": 3,
+          "neutralDescription": "Two promotional video cards side by side with dark blue background, video thumbnail, category label, title, description, and CTA button",
+          "htmlClass": "call-to-action call-to-action--video",
+          "layout": "2-column",
+          "itemCount": 2,
+          "items": [
+            {
+              "category": "Webinar",
+              "title": "Processing Paper Checks",
+              "description": "How to Minimize Risk and Increase Capture Efficiency",
+              "cta": "GET THE WHITE PAPER"
+            },
+            {
+              "category": "Webinar",
+              "title": "Automation 201",
+              "description": "Clarifying Your Requirements for Project Success",
+              "cta": "GET THE WHITE PAPER"
+            }
+          ]
+        },
+        {
+          "sequenceNumber": 4,
+          "neutralDescription": "Three article cards in horizontal row (3-column layout), each with image, title, and read time",
+          "htmlClass": "card",
+          "layout": "3-column",
+          "itemCount": 3,
+          "items": [
+            {
+              "title": "Projection Illuminates Six Performance Venues at UMD",
+              "readTime": "3 min read"
+            },
+            {
+              "title": "A Reminder that Packaging is Part and Parcel of Truly Great Brands",
+              "readTime": "2 min read"
+            },
+            {
+              "title": "How to Refresh Your Brand With Purpose and Precision",
+              "readTime": "4 min read"
+            }
+          ]
+        },
+        {
+          "sequenceNumber": 5,
+          "neutralDescription": "Load More button centered at bottom",
+          "htmlClass": "button button--loadmore",
+          "interactiveElement": true,
+          "note": "Pagination control - may need alternative approach for static migration"
+        }
+      ]
+    }
+  ],
+  "blockInventory": {
+    "localBlocks": [
+      {
+        "name": "cards",
+        "purpose": "Grid of content items with images, headings, and descriptions"
+      },
+      {
+        "name": "columns",
+        "purpose": "Side-by-side content in multiple columns"
+      },
+      {
+        "name": "hero",
+        "purpose": "Large prominent content at top of page"
+      },
+      {
+        "name": "fragment",
+        "purpose": "Reusable content section that can be embedded"
+      },
+      {
+        "name": "header",
+        "purpose": "Site header with navigation (auto-populated)"
+      },
+      {
+        "name": "footer",
+        "purpose": "Site footer with links (auto-populated)"
+      }
+    ],
+    "blockCollectionAvailable": [
+      {
+        "name": "accordion",
+        "purpose": "Expandable Q&A sections",
+        "liveExample": "https://main--aem-block-collection--adobe.aem.live/block-collection/accordion"
+      },
+      {
+        "name": "tabs",
+        "purpose": "Switchable content panels",
+        "liveExample": "https://main--aem-block-collection--adobe.aem.live/block-collection/tabs"
+      },
+      {
+        "name": "carousel",
+        "purpose": "Rotating image/content displays",
+        "liveExample": "https://main--aem-block-collection--adobe.aem.live/block-collection/carousel"
+      }
+    ]
+  },
+  "summary": {
+    "totalSections": 3,
+    "totalContentSequences": 9,
+    "primaryContentType": "Blog article cards in various grid layouts",
+    "interactiveElements": ["Filter dropdowns", "Category filter buttons", "Load More button"],
+    "migrationNotes": [
+      "Featured hero article uses columns-style 50/50 layout",
+      "Article cards appear in different grid configurations (2-col, 3-col)",
+      "Video promo cards have distinct dark blue styling",
+      "Filter functionality is dynamic - will need static alternative",
+      "Load More pagination needs consideration for static site"
+    ]
+  }
+}

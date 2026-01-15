@@ -1,0 +1,269 @@
+{
+  "url": "https://blog.epson.com/",
+  "analysisDate": "2026-01-15",
+  "authoringDecisions": {
+    "sections": [
+      {
+        "sectionNumber": 1,
+        "name": "Featured Articles",
+        "sectionStyle": null,
+        "sequences": [
+          {
+            "sequenceNumber": 1,
+            "description": "One large featured article with image on left half, title, description paragraph, and read time link on right half - 50/50 split layout",
+            "decision": "columns-featured",
+            "blockVariant": "columns-featured",
+            "reason": "Side-by-side layout with image on one side and content on other requires structured layout. Columns block (two columns) is the obvious match for 50/50 content split.",
+            "contentModel": {
+              "blockType": "columns-featured",
+              "variant": "columns-featured",
+              "structure": "Row 1: 2 columns [image | heading, paragraph(s), link]",
+              "content": {
+                "column1": {
+                  "image": "./images/60e072c703bbacd134af3c47990458f6.jpg",
+                  "alt": "How Document Scanners can Help Protect Citizen Data at the Source"
+                },
+                "column2": {
+                  "title": "How Document Scanners can Help Protect Citizen Data at the Source",
+                  "description": "Some government offices across the country still house many sensitive paper-based documents in filing cabinets and storage rooms. These can contain some of the most sensitive citizen information, including birth certificates, tax records, social security information, and court filings — often going back decades. Making a literal paper trail of civic life can create security",
+                  "link": {
+                    "text": "3 min read",
+                    "url": "https://blog.epson.com/how-document-scanners-can-help-protect-citizen-data/"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "sequenceNumber": 2,
+            "description": "Three smaller article cards in horizontal row, each with image on top, title below, and read time link",
+            "decision": "cards-article",
+            "blockVariant": "cards-article",
+            "reason": "Repeating structured pattern of items with images and text. Cards block is the obvious match for content grid.",
+            "contentModel": {
+              "blockType": "cards-article",
+              "variant": "cards-article",
+              "structure": "Each card = 1 row with 2 columns [image | heading, link]",
+              "itemCount": 3,
+              "items": [
+                {
+                  "image": "./images/4e4cd01fe9df4c3730bbb0467be87381.jpg",
+                  "title": "A Three-Phased Approach that can Help Schools Take Robotics Education from Virtual to Reality",
+                  "link": "https://blog.epson.com/three-phased-approach-can-help-schools-robotics-education/",
+                  "linkText": "2 min read"
+                },
+                {
+                  "image": "./images/b4017195f6dbaf8d4847db4b007b753e.jpg",
+                  "title": "15 Great Ideas to Get the Most from Your School Printer – and Inspire Students",
+                  "link": "https://blog.epson.com/15-great-ideas-to-get-the-most-from-your-school-printer/",
+                  "linkText": "3 min read"
+                },
+                {
+                  "image": "./images/4d970c28ed324310f22532775ad6954a.jpg",
+                  "title": "6 Government Agencies That Can Benefit From Document Scanners Today",
+                  "link": "https://blog.epson.com/government-agencies-that-can-benefit-from-document-scanners/",
+                  "linkText": "2 min read"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "sectionNumber": 2,
+        "name": "Content Filters",
+        "sectionStyle": null,
+        "migrationNote": "SKIP SECTION - Dynamic filtering functionality (dropdowns, buttons) cannot be migrated to static content. This is an interactive WordPress feature that would need custom implementation in EDS.",
+        "sequences": [
+          {
+            "sequenceNumber": 1,
+            "description": "Filter heading with three dropdown selectors (Category, Tag, Format) and Apply Filter button",
+            "decision": "SKIP",
+            "reason": "Interactive filter controls are dynamic functionality that requires JavaScript/backend. Cannot be authored as static content."
+          },
+          {
+            "sequenceNumber": 2,
+            "description": "Row of category/tag filter buttons",
+            "decision": "SKIP",
+            "reason": "Part of interactive filtering system. Requires dynamic functionality."
+          }
+        ]
+      },
+      {
+        "sectionNumber": 3,
+        "name": "Latest Articles Grid",
+        "sectionStyle": null,
+        "sequences": [
+          {
+            "sequenceNumber": 1,
+            "description": "Two larger article cards side by side (2-column layout), each with image, title, and read time",
+            "decision": "cards-article",
+            "blockVariant": "cards-article",
+            "reason": "Repeating structured pattern with images and text. Cards block handles grid layout.",
+            "contentModel": {
+              "blockType": "cards-article",
+              "variant": "cards-article",
+              "structure": "Each card = 1 row with 2 columns [image | heading, link]",
+              "itemCount": 2,
+              "items": [
+                {
+                  "image": "./images/50e7431bbce98a9f53d0fc6b242990c1.jpg",
+                  "title": "Epson and Cirque du Soleil: Bringing Imagination to Life with Cutting-Edge Projection Technology",
+                  "link": "https://blog.epson.com/bringing-imagination-to-life-with-cutting-edge-projection-technology/",
+                  "linkText": "2 min read"
+                },
+                {
+                  "image": "./images/26f68e4b316b4e29acc7ce88ff170711.jpg",
+                  "title": "Why Your Next Scanner Better Speak Arm",
+                  "link": "https://blog.epson.com/why-your-next-scanner-better-speak-arm/",
+                  "linkText": "2 min read"
+                }
+              ]
+            }
+          },
+          {
+            "sequenceNumber": 2,
+            "description": "Three article cards in horizontal row (3-column layout), each with image, title, and read time",
+            "decision": "cards-article",
+            "blockVariant": "cards-article",
+            "reason": "Repeating structured pattern with images and text. Cards block handles grid layout.",
+            "contentModel": {
+              "blockType": "cards-article",
+              "variant": "cards-article",
+              "structure": "Each card = 1 row with 2 columns [image | heading, link]",
+              "itemCount": 3,
+              "items": [
+                {
+                  "image": "./images/b80321282c3fec22b300e260a922f530.jpg",
+                  "title": "How to Create a New Generation of Robot Whisperers",
+                  "link": "https://blog.epson.com/how-to-create-a-new-generation-of-robot-whisperers/",
+                  "linkText": "3 min read"
+                },
+                {
+                  "image": "./images/0e0dfc3dc6f2f3a2e2ce88ef41883e37.jpg",
+                  "title": "Energy Managers: Is Your Next Efficiency Win Hiding in the Copy Room?",
+                  "link": "https://blog.epson.com/is-your-next-efficiency-win-hiding-in-the-copy-room/",
+                  "linkText": "4 min read"
+                },
+                {
+                  "image": "./images/c15fb4b8e9eec2527017bc26761e0b03.jpg",
+                  "title": "Making Money as a Photographer",
+                  "link": "https://blog.epson.com/making-money-as-a-photographer/",
+                  "linkText": "9 min read"
+                }
+              ]
+            }
+          },
+          {
+            "sequenceNumber": 3,
+            "description": "Two promotional video cards side by side with dark blue background, category label, title, description, and CTA button",
+            "decision": "cards-promo",
+            "blockVariant": "cards-promo",
+            "reason": "Repeating structured pattern. Cards block with special styling variant for promotional/CTA cards.",
+            "contentModel": {
+              "blockType": "cards-promo",
+              "variant": "cards-promo",
+              "structure": "Each card = 1 row with 2 columns [image/video | category, heading, paragraph, link]",
+              "note": "These cards have distinctive dark blue styling and video/CTA treatment",
+              "itemCount": 2,
+              "items": [
+                {
+                  "category": "Webinar",
+                  "title": "Processing Paper Checks",
+                  "description": "How to Minimize Risk and Increase Capture Efficiency",
+                  "link": "https://blog.epson.com/checks-are-not-dead-yet-2/",
+                  "linkText": "GET THE WHITE PAPER"
+                },
+                {
+                  "category": "Webinar",
+                  "title": "Automation 201",
+                  "description": "Clarifying Your Requirements for Project Success",
+                  "link": "https://blog.epson.com/a-deep-dive-into-clarifying-your-requirements-for-project-success/",
+                  "linkText": "GET THE WHITE PAPER"
+                }
+              ]
+            }
+          },
+          {
+            "sequenceNumber": 4,
+            "description": "Three article cards in horizontal row (3-column layout), each with image, title, and read time",
+            "decision": "cards-article",
+            "blockVariant": "cards-article",
+            "reason": "Repeating structured pattern with images and text. Cards block handles grid layout.",
+            "contentModel": {
+              "blockType": "cards-article",
+              "variant": "cards-article",
+              "structure": "Each card = 1 row with 2 columns [image | heading, link]",
+              "itemCount": 3,
+              "items": [
+                {
+                  "image": "./images/2378356eaf911b369bb8cbff99e9b02b.png",
+                  "title": "Projection Illuminates Six Performance Venues at UMD",
+                  "link": "https://blog.epson.com/projection-illuminates-six-performance-venues-at-umd/",
+                  "linkText": "3 min read"
+                },
+                {
+                  "image": "./images/3cd66b00c14f76c30d725234cf9bd692.jpg",
+                  "title": "A Reminder that Packaging is Part and Parcel of Truly Great Brands",
+                  "link": "https://blog.epson.com/packaging-is-part-and-parcel-of-truly-great-brands/",
+                  "linkText": "2 min read"
+                },
+                {
+                  "image": "./images/7a0a60584d73cbd1b755478b833f74ac.jpg",
+                  "title": "How to Refresh Your Brand With Purpose and Precision",
+                  "link": "https://blog.epson.com/how-to-refresh-your-brand-with-purpose-and-precision/",
+                  "linkText": "4 min read"
+                }
+              ]
+            }
+          },
+          {
+            "sequenceNumber": 5,
+            "description": "Load More button centered at bottom",
+            "decision": "SKIP",
+            "reason": "Pagination control for dynamic content loading. Cannot be meaningfully migrated to static content. Blog listing would need alternative approach (multiple static pages or different implementation)."
+          }
+        ]
+      }
+    ]
+  },
+  "blockStructuresUsed": {
+    "columns-featured": {
+      "baseBlock": "columns",
+      "variant": "columns-featured",
+      "structure": "Row with 2 columns [image | heading, paragraph, link]",
+      "usage": "Featured article with 50/50 image/content layout"
+    },
+    "cards-article": {
+      "baseBlock": "cards",
+      "variant": "cards-article",
+      "structure": "Each card = 1 row with 2 columns [image | heading, link]",
+      "usage": "Article cards throughout the page"
+    },
+    "cards-promo": {
+      "baseBlock": "cards",
+      "variant": "cards-promo",
+      "structure": "Each card = category + heading + description + CTA link",
+      "usage": "Promotional CTA cards with dark blue background"
+    }
+  },
+  "sectionStylingValidation": {
+    "note": "No single-block sections with distinct backgrounds identified. All sections have light/white background and contain multiple sequences or are being skipped.",
+    "validatedSections": []
+  },
+  "migrationSummary": {
+    "totalSequences": 9,
+    "migratedSequences": 6,
+    "skippedSequences": 3,
+    "blocksUsed": ["columns-featured", "cards-article", "cards-promo"],
+    "skippedContent": [
+      "Section 2: Content Filters - Dynamic filtering functionality",
+      "Section 3 Sequence 5: Load More button - Pagination control"
+    ],
+    "notes": [
+      "Promo cards (sequence 3.3) will need variant styling for dark blue background",
+      "All article cards follow same pattern: image + title + read time link",
+      "Featured article uses columns for 50/50 layout instead of hero block"
+    ]
+  }
+}

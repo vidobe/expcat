@@ -1,0 +1,146 @@
+{
+  "url": "https://blog.epson.com/",
+  "timestamp": "2026-01-15T08:09:28.724Z",
+  "paths": {
+    "documentPath": "/index",
+    "htmlFilePath": "content/index.plain.html",
+    "mdFilePath": "content/index.md",
+    "dirPath": "content",
+    "filename": "index"
+  },
+  "previewPath": "http://localhost:3000/index",
+  "screenshot": "migration-work/screenshot.png",
+  "html": {
+    "filePath": "migration-work/cleaned.html",
+    "size": 160253
+  },
+  "metadata": {
+    "title": "Epson - Technology and Solutions Blog for Business & Education",
+    "viewport": "width=device-width, initial-scale=1",
+    "theme-color": "#003399",
+    "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    "description": "Content built for you: Helpful articles, white papers and insights from an industry leader on Enterprise, Small Business & Education tech. Explore today!",
+    "og:locale": "en_US",
+    "og:type": "website",
+    "og:title": "Epson",
+    "og:description": "Content built for you: Helpful articles, white papers and insights from an industry leader on Enterprise, Small Business & Education tech. Explore today!",
+    "og:url": "https://blog.epson.com/",
+    "og:site_name": "Epson",
+    "og:image": "https://s10011.cdn.ncms.io/wp-content/uploads/2023/04/social-preview.png",
+    "og:image:width": "1200",
+    "og:image:height": "675",
+    "og:image:type": "image/png",
+    "twitter:card": "summary_large_image",
+    "google-site-verification": "YBdR67wTS5UBcnvLiZPaeSt_xv5aHpGDWnL04QFHgow",
+    "canonical": "https://blog.epson.com/",
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "@id": "https://blog.epson.com/",
+          "url": "https://blog.epson.com/",
+          "name": "Epson - Technology and Solutions Blog for Business &amp; Education",
+          "isPartOf": {
+            "@id": "https://blog.epson.com/#website"
+          },
+          "about": {
+            "@id": "https://blog.epson.com/#organization"
+          },
+          "description": "Content built for you: Helpful articles, white papers and insights from an industry leader on Enterprise, Small Business & Education tech. Explore today!",
+          "breadcrumb": {
+            "@id": "https://blog.epson.com/#breadcrumb"
+          },
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://blog.epson.com/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home"
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://blog.epson.com/#website",
+          "url": "https://blog.epson.com/",
+          "name": "Epson",
+          "description": "Technology and Solutions Blog for Business &amp; Education",
+          "publisher": {
+            "@id": "https://blog.epson.com/#organization"
+          },
+          "potentialAction": [
+            {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://blog.epson.com/?s={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            }
+          ],
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://blog.epson.com/#organization",
+          "name": "Epson",
+          "url": "https://blog.epson.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "inLanguage": "en-US",
+            "@id": "https://blog.epson.com/#/schema/logo/image/",
+            "url": "https://s10011.cdn.ncms.io/wp-content/uploads/2023/04/logo-epson.png",
+            "contentUrl": "https://s10011.cdn.ncms.io/wp-content/uploads/2023/04/logo-epson.png",
+            "width": 1200,
+            "height": 675,
+            "caption": "Epson"
+          },
+          "image": {
+            "@id": "https://blog.epson.com/#/schema/logo/image/"
+          }
+        }
+      ]
+    }
+  },
+  "images": {
+    "count": 23,
+    "mapping": {
+      "https://images-cdn4.welcomesoftware.com/Zz1lNDY2ZmQ0MmYwYWExMWYwYjE4MDhlMGNmNDBkMzIxZg==?width=708&height=398": "./images/60e072c703bbacd134af3c47990458f6.jpg",
+      "https://s10011.cdn.ncms.io/wp-content/themes/epson-v2/assets/images/site-logo-aebaaa60b09818951404.svg": "./images/79256e7be547a9b32317801f5fc4f37c.png",
+      "https://images-cdn3.welcomesoftware.com/Zz03MzQwZmU3Y2ViMmExMWYwYWQ0Yzc2ZjJkMjczODU2Mg==?width=708&height=398": "./images/4e4cd01fe9df4c3730bbb0467be87381.jpg",
+      "https://images-cdn1.welcomesoftware.com/Zz04YzUzMTNjMGQ2Y2UxMWYwYTQ3Nzk2MWM4ZmFiNmFlMA==?width=708&height=398": "./images/b4017195f6dbaf8d4847db4b007b753e.jpg",
+      "https://images-cdn1.welcomesoftware.com/Zz00MzgzNDY2YWNmYzYxMWYwOTg1YzM2ZjJhODgyZjU3NA==?width=708&height=398": "./images/4d970c28ed324310f22532775ad6954a.jpg",
+      "https://images-cdn3.welcomesoftware.com/Zz02ODJjNjFlOGIzODUxMWYwOThiNDM2YzAzYjVkOTYzMg==?width=708&height=398": "./images/c15fb4b8e9eec2527017bc26761e0b03.jpg",
+      "https://images-cdn3.welcomesoftware.com/Zz1mMTk5ZTI3NmMxYWQxMWYwYmFhMjJlYjNmMzU3OWRhZQ==?width=708&height=398": "./images/0e0dfc3dc6f2f3a2e2ce88ef41883e37.jpg",
+      "https://images-cdn3.welcomesoftware.com/Zz0wM2I5YTljZWRlODcxMWVmOGZiOWY2MzVjNGRhYmJmZQ==?width=708&height=398": "./images/7a0a60584d73cbd1b755478b833f74ac.jpg",
+      "https://images-cdn2.welcomesoftware.com/Zz0zNGE2MWU5MmM1OWUxMWYwYWIzNzMyYThiMDNkMTQ5NQ==?width=708&height=398": "./images/26f68e4b316b4e29acc7ce88ff170711.jpg",
+      "https://images-cdn3.welcomesoftware.com/Zz1lNjFhNDdkMGM2NDcxMWYwYWMxODBlNzMxY2I1ZWM4YQ==?width=708&height=398": "./images/50e7431bbce98a9f53d0fc6b242990c1.jpg",
+      "https://images-cdn2.welcomesoftware.com/Zz1kMDViMmNmODc4NzExMWYwYjE2NTNhNWMwNTk4NGE0MQ==?width=708&height=398": "./images/b80321282c3fec22b300e260a922f530.jpg",
+      "https://images-cdn2.welcomesoftware.com/Zz00OTJjMDVkMDliMGUxMWYwOTk0MTI2NzJmNjhjOTUwNQ==?width=708&height=398": "./images/3cd66b00c14f76c30d725234cf9bd692.jpg",
+      "https://images3.cmp.optimizely.com/Zz04MjQ4ZmZjMDlkMmMxMWVmYmYzNGJhZGI5NDNiNTQzZQ==": "./images/254954733baad4d0c1807257b712234f.png",
+      "https://images3.cmp.optimizely.com/Zz1jMDMyNjA0YzlkMmMxMWVmYmE0NTFlYTY2MTI5N2IyNg==": "./images/beeac9ec5593524804fcc4497a283871.png",
+      "https://dpm.demdex.net/ibs:dpid=411&dpuuid=aWigsgAAAB4ShgMv": "./images/6e7e351e13da39506787efd58f8d6339.png",
+      "https://epson.sc.omtrdc.net/b/ss/epsonglobalhybrisprod/1/JS-2.10.0/s68395584701401?AQB=1&ndh=1&pf=1&t=15%2F0%2F2026%208%3A9%3A23%204%200&sdid=32920B9201F9448B-6948ED578670EBA4&mid=70497132964768069031775045257544846632&aamlh=7&ce=UTF-8&ns=epson&cdp=2&pageName=epson%3Aus%3Anewscred%3Ahomepage&g=https%3A%2F%2Fblog.epson.com%2F&cc=USD&ch=newscred&server=blog.epson.com&events=event51&aamb=6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y&v2=us&v3=newscred%20homepage&c4=newscred%20homepage&v4=epson%3Aus&c5=epson%3Aus&c6=us&c7=newscred%3Ahomepage&v9=newscred%20homepage&c10=blog.epson.com%2F&v10=blog.epson.com%2F&c11=New&v11=New&c18=epson%3Aus%3Anewscred%3Ahomepage&c19=en&v19=en&c20=epson%3Aus%3Anewscred%3Ahomepage&v20=epson%3Aus%3Anewscred%3Ahomepage&v22=baseline&c23=baseline&v23=0&c24=0&v24=%2B1&v27=epson%3Aus%3Anewscred%3Ahomepage&c42=newscred%20homepage&c44=blog.epson.com%2F&c55=12%3A00AM&c56=Thursday&c57=Weekday&c59=First%20Visit&v140=0.7373580752860465_1768464563395&v160=Light&s=1280x720&c=24&j=1.6&v=N&k=Y&bw=1280&bh=720&mcorgid=0FEE68F454E6D1890A4C98A6%40AdobeOrg&AQE=1": "./images/fe1884770487a1bea481b1886c27239a.png",
+      "https://cdn.cookielaw.org/logos/b167a6c8-6cd6-488c-8bba-4ef35c0beca5/018ef733-862b-7aa6-bf55-c25992efd6d5/e2cdbb88-1c55-4451-9028-5ca6d23abd09/logo-blue-epson_128x56.png": "./images/c91ff1bca002ad951a0a1621c1491f07.png",
+      "https://cdn.cookielaw.org/logos/static/powered_by_logo.svg": "./images/a9584a367ebcccfac48987ce1fec5eae.png",
+      "https://images-cdn3.welcomesoftware.com/Zz1kNGZjZDhjODMwM2QxMWYwODVmZTZlMDEzNGQxOGMxZQ==?width=708&height=398": "./images/2378356eaf911b369bb8cbff99e9b02b.png",
+      "https://epson.sc.omtrdc.net/b/ss/epsonglobalhybrisprod/1/JS-2.10.0/s63068502042588?AQB=1&ndh=1&pf=1&t=15%2F0%2F2026%208%3A9%3A23%204%200&sdid=0683302A5CAB9FB1-41F2EF5C5873C90C&mid=70497132964768069031775045257544846632&aamlh=7&ce=UTF-8&ns=epson&cdp=2&pageName=epson%3Aus%3Anewscred%3Ahomepage&g=https%3A%2F%2Fblog.epson.com%2F&cc=USD&server=blog.epson.com&events=event52&c10=blog.epson.com%2F&v10=blog.epson.com%2F&c11=New&v11=New&c20=epson%3Aus%3Anewscred%3Ahomepage&v20=epson%3Aus%3Anewscred%3Ahomepage&v22=25&c23=25&v23=723&c24=723&c44=blog.epson.com%2F&c55=12%3A00AM&c56=Thursday&c57=Weekday&c59=Less%20than%201%20day&v140=0.7373580752860465_1768464563395&pe=lnk_o&pev2=no%20link_name&s=1280x720&c=24&j=1.6&v=N&k=Y&bw=1280&bh=720&mcorgid=0FEE68F454E6D1890A4C98A6%40AdobeOrg&lrt=63&AQE=1": "./images/8371d71b5ebb32fe2396580cef905689.png",
+      "https://epson.sc.omtrdc.net/b/ss/epsonglobalhybrisprod/1/JS-2.10.0/s63244085548186?AQB=1&ndh=1&pf=1&t=15%2F0%2F2026%208%3A9%3A24%204%200&sdid=2474D8174A209AF0-28C34C060D69205A&mid=70497132964768069031775045257544846632&aamlh=7&ce=UTF-8&ns=epson&cdp=2&pageName=epson%3Aus%3Anewscred%3Ahomepage&g=https%3A%2F%2Fblog.epson.com%2F&cc=USD&server=blog.epson.com&events=event53&c10=blog.epson.com%2F&v10=blog.epson.com%2F&c11=New&v11=New&c20=epson%3Aus%3Anewscred%3Ahomepage&v20=epson%3Aus%3Anewscred%3Ahomepage&v22=50&c23=50&v23=1455&c24=1455&c44=blog.epson.com%2F&c55=12%3A00AM&c56=Thursday&c57=Weekday&c59=Less%20than%201%20day&v140=0.7373580752860465_1768464563395&pe=lnk_o&pev2=no%20link_name&s=1280x720&c=24&j=1.6&v=N&k=Y&bw=1280&bh=720&mcorgid=0FEE68F454E6D1890A4C98A6%40AdobeOrg&lrt=25&AQE=1": "./images/67bba9bc8a72244409248ff18175cd87.png",
+      "https://epson.sc.omtrdc.net/b/ss/epsonglobalhybrisprod/1/JS-2.10.0/s67158488635999?AQB=1&ndh=1&pf=1&t=15%2F0%2F2026%208%3A9%3A25%204%200&sdid=0165D1A3C527EAD0-163DCBDC646FB209&mid=70497132964768069031775045257544846632&aamlh=7&ce=UTF-8&ns=epson&cdp=2&pageName=epson%3Aus%3Anewscred%3Ahomepage&g=https%3A%2F%2Fblog.epson.com%2F&cc=USD&server=blog.epson.com&events=event54&c10=blog.epson.com%2F&v10=blog.epson.com%2F&c11=New&v11=New&c20=epson%3Aus%3Anewscred%3Ahomepage&v20=epson%3Aus%3Anewscred%3Ahomepage&v22=75&c23=75&v23=2226&c24=2226&c44=blog.epson.com%2F&c55=12%3A00AM&c56=Thursday&c57=Weekday&c59=Less%20than%201%20day&v140=0.7373580752860465_1768464563395&pe=lnk_o&pev2=no%20link_name&s=1280x720&c=24&j=1.6&v=N&k=Y&bw=1280&bh=720&mcorgid=0FEE68F454E6D1890A4C98A6%40AdobeOrg&lrt=23&AQE=1": "./images/86748cd9bfa20b897eed35392d1a6e48.png",
+      "https://epson.sc.omtrdc.net/b/ss/epsonglobalhybrisprod/1/JS-2.10.0/s65079172213527?AQB=1&ndh=1&pf=1&t=15%2F0%2F2026%208%3A9%3A26%204%200&sdid=44366F6B376020A6-53BE956701776F90&mid=70497132964768069031775045257544846632&aamlh=7&ce=UTF-8&ns=epson&cdp=2&pageName=epson%3Aus%3Anewscred%3Ahomepage&g=https%3A%2F%2Fblog.epson.com%2F&cc=USD&server=blog.epson.com&events=event55&c10=blog.epson.com%2F&v10=blog.epson.com%2F&c11=New&v11=New&c20=epson%3Aus%3Anewscred%3Ahomepage&v20=epson%3Aus%3Anewscred%3Ahomepage&v22=100&c23=100&v23=2779&c24=2779&c44=blog.epson.com%2F&c55=12%3A00AM&c56=Thursday&c57=Weekday&c59=Less%20than%201%20day&v140=0.7373580752860465_1768464563395&pe=lnk_o&pev2=no%20link_name&s=1280x720&c=24&j=1.6&v=N&k=Y&bw=1280&bh=720&mcorgid=0FEE68F454E6D1890A4C98A6%40AdobeOrg&lrt=25&AQE=1": "./images/9be770fd97f4d99b7305155612ec7385.png"
+    },
+    "stats": {
+      "total": 24,
+      "converted": 9,
+      "skipped": 14,
+      "failed": 1,
+      "tooLarge": 0,
+      "limitReached": 0
+    }
+  }
+}
