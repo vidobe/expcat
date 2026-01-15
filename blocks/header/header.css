@@ -469,7 +469,7 @@ header nav .nav-tools .search-container {
   border-color: var(--epson-blue, #003087);
 }
 
-.search-dropdown-form button {
+.search-dropdown .search-dropdown-form button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -485,11 +485,11 @@ header nav .nav-tools .search-container {
   transition: background 0.2s ease;
 }
 
-.search-dropdown-form button:hover {
+.search-dropdown .search-dropdown-form button:hover {
   background: #001a4d;
 }
 
-.search-dropdown-form button svg {
+.search-dropdown .search-dropdown-form button svg {
   width: 18px;
   height: 18px;
 }
