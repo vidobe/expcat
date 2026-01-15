@@ -201,8 +201,10 @@ export default async function decorate(block) {
   // Setup search functionality
   const navTools = nav.querySelector('.nav-tools');
   if (navTools) {
-    const searchLink = navTools.querySelector('a[href*="#"]');
-    if (searchLink && searchLink.textContent.toLowerCase().includes('search')) {
+    // Find search link by text content (href may be # or / depending on environment)
+    const allLinks = navTools.querySelectorAll('a');
+    const searchLink = Array.from(allLinks).find((a) => a.textContent.toLowerCase().includes('search'));
+    if (searchLink) {
       const searchButton = document.createElement('button');
       searchButton.className = 'search-button';
       searchButton.setAttribute('aria-label', 'Open search');
