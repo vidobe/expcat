@@ -49,6 +49,22 @@
   z-index: 1;
 }
 
+.cards-promo .cards-card-body h3 {
+  margin: 0 0 12px;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+}
+
+/* Base paragraph styles - must come before pseudo-class selectors */
+.cards-promo .cards-card-body p {
+  margin: 0 0 8px;
+  font-size: 16px;
+  color: rgb(255 255 255 / 90%);
+  line-height: 1.5;
+}
+
 /* Category label */
 .cards-promo .cards-card-body p:first-child {
   display: inline-block;
@@ -61,21 +77,6 @@
   padding: 4px 12px;
   margin: 0 0 16px;
   width: fit-content;
-}
-
-.cards-promo .cards-card-body h3 {
-  margin: 0 0 12px;
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 1.2;
-  color: #fff;
-}
-
-.cards-promo .cards-card-body p {
-  margin: 0 0 8px;
-  font-size: 16px;
-  color: rgb(255 255 255 / 90%);
-  line-height: 1.5;
 }
 
 .cards-promo .cards-card-body p:last-child {

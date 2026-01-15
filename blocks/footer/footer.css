@@ -81,8 +81,7 @@ footer .footer > div > .default-content-wrapper:last-child > p:not(:first-child)
   }
 
   footer .footer > div > .default-content-wrapper:last-child {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
     gap: 12px;

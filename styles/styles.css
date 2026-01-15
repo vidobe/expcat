@@ -22,8 +22,8 @@
   --border-color: #e5e5e5;
 
   /* fonts */
-  --body-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Helvetica Neue", sans-serif;
-  --heading-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Helvetica Neue", sans-serif;
+  --body-font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Helvetica Neue", sans-serif;
+  --heading-font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Helvetica Neue", sans-serif;
 
   /* body sizes */
   --body-font-size-m: 18px;
