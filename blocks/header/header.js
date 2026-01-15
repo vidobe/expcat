@@ -4,6 +4,45 @@ import { loadFragment } from '../fragment/fragment.js';
 // media query match that indicates mobile/tablet width
 const isDesktop = window.matchMedia('(min-width: 900px)');
 
+function createSearchModal() {
+  const modal = document.createElement('div');
+  modal.className = 'search-modal';
+  modal.innerHTML = `
+    <div class="search-modal-content">
+      <div class="search-modal-header">
+        <h3>Search</h3>
+        <button class="search-modal-close" aria-label="Close search">&times;</button>
+      </div>
+      <form class="search-modal-form" action="https://blog.epson.com/" method="get">
+        <input type="text" name="s" placeholder="Search..." aria-label="Search query">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  `;
+
+  // Close on backdrop click
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('open');
+    }
+  });
+
+  // Close on button click
+  modal.querySelector('.search-modal-close').addEventListener('click', () => {
+    modal.classList.remove('open');
+  });
+
+  // Close on escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) {
+      modal.classList.remove('open');
+    }
+  });
+
+  document.body.appendChild(modal);
+  return modal;
+}
+
 function closeOnEscape(e) {
   if (e.code === 'Escape') {
     const nav = document.getElementById('nav');
@@ -158,6 +197,33 @@ export default async function decorate(block) {
   // prevent mobile nav behavior on window resize
   toggleMenu(nav, navSections, isDesktop.matches);
   isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
+
+  // Setup search functionality
+  const navTools = nav.querySelector('.nav-tools');
+  if (navTools) {
+    const searchLink = navTools.querySelector('a[href*="#"]');
+    if (searchLink && searchLink.textContent.toLowerCase().includes('search')) {
+      const searchButton = document.createElement('button');
+      searchButton.className = 'search-button';
+      searchButton.setAttribute('aria-label', 'Open search');
+      searchButton.innerHTML = '<span>Search</span>';
+
+      const searchModal = createSearchModal();
+
+      searchButton.addEventListener('click', () => {
+        searchModal.classList.add('open');
+        searchModal.querySelector('input').focus();
+      });
+
+      // Replace the link with the button
+      const linkParent = searchLink.parentElement;
+      if (linkParent.tagName === 'P') {
+        linkParent.replaceChild(searchButton, searchLink);
+      } else {
+        searchLink.parentElement.replaceChild(searchButton, searchLink);
+      }
+    }
+  }
 
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';
