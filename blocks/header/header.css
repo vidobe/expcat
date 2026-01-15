@@ -1,3 +1,98 @@
+/* Search modal - placed at top to avoid specificity issues with button selectors */
+.search-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0 0 0 / 50%);
+  z-index: 1000;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.search-modal.open {
+  display: flex;
+}
+
+.search-modal-content {
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 10px 40px rgb(0 0 0 / 20%);
+}
+
+.search-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.search-modal-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+.search-modal-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  padding: 0;
+  margin: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-modal-close:hover {
+  color: #333;
+  background: none;
+}
+
+.search-modal-form {
+  display: flex;
+  gap: 12px;
+}
+
+.search-modal-form input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.search-modal-form input:focus {
+  outline: none;
+  border-color: var(--epson-blue, #003087);
+}
+
+.search-modal-form button {
+  padding: 12px 24px;
+  background: var(--epson-blue, #003087);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.search-modal-form button:hover {
+  background: #001a4d;
+}
+
 /* header and nav layout */
 header .nav-wrapper {
   background-color: var(--background-color);
@@ -254,101 +349,6 @@ header nav .nav-tools .search-button span {
   clip-path: inset(50%);
   white-space: nowrap;
   border: 0;
-}
-
-/* Search modal */
-.search-modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgb(0 0 0 / 50%);
-  z-index: 1000;
-  align-items: flex-start;
-  justify-content: center;
-  padding-top: 100px;
-}
-
-.search-modal.open {
-  display: flex;
-}
-
-.search-modal-content {
-  background: #fff;
-  padding: 24px;
-  border-radius: 8px;
-  width: 90%;
-  max-width: 600px;
-  box-shadow: 0 10px 40px rgb(0 0 0 / 20%);
-}
-
-.search-modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
-}
-
-.search-modal-header h3 {
-  margin: 0;
-  font-size: 18px;
-  color: var(--text-color);
-}
-
-.search-modal-close {
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: #666;
-  padding: 0;
-  margin: 0;
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.search-modal-close:hover {
-  color: #333;
-  background: none;
-}
-
-.search-modal-form {
-  display: flex;
-  gap: 12px;
-}
-
-.search-modal-form input {
-  flex: 1;
-  padding: 12px 16px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 16px;
-}
-
-.search-modal-form input:focus {
-  outline: none;
-  border-color: var(--epson-blue, #003087);
-}
-
-.search-modal-form button {
-  padding: 12px 24px;
-  background: var(--epson-blue, #003087);
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.search-modal-form button:hover {
-  background: #001a4d;
 }
 
 @media (width >= 900px) {
